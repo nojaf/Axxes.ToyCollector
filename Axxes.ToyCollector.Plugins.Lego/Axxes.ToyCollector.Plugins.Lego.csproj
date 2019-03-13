@@ -18,4 +18,9 @@
   <ItemGroup>
     <ProjectReference Include="..\Axxes.ToyCollector.Core.Contracts\Axxes.ToyCollector.Core.Contracts.csproj" />
   </ItemGroup>
+  
+  <ItemGroup>
+    <None Remove="Logic\logo.txt" />
+    <EmbeddedResource Include="Logic\logo.txt" />
+  </ItemGroup>
 </Project>

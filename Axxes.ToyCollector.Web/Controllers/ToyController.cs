@@ -50,7 +50,15 @@ namespace Axxes.ToyCollector.Web.Controllers
         {
             try
             {
-                await _toyCreator.CreateToy(value);
+                try
+                {
+                    await _toyCreator.CreateToy(value);
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e);
+                    throw;
+                }
                 return CreatedAtAction(nameof(Get), new {id = value.Id}, value);
             }
             catch (Exception)
